@@ -1,0 +1,36 @@
+# Define las etapas del pipeline
+stages:
+  - build
+  - test
+  - deploy
+
+# Etapa de construcción
+build:
+  stage: build
+  image: node:16
+  script:
+    - npm install # Instalar dependencias
+    - npm run build # Construir la aplicación
+  artifacts:
+    paths:
+      - dist/ # Ruta de los archivos de construcción
+
+# Etapa de pruebas
+test:
+  stage: test
+  image: node:16
+  script:
+    - echo "Ejecutando pruebas...."
+
+# Etapa de despliegue
+deploy:
+  stage: deploy
+  image: mrisco/pulumi-alpine
+  script:
+    - aws configure set aws_access_key_id AKIAQ3EGRBFDOZ46LYWF
+    - aws configure set aws_secret_access_key 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
+    - aws configure set region us-east-1
+    - echo "Ejecutando deploy..."
+    - aws s3 sync ./dist/* s3://proyectbucket-8c51eda/iac-cloud-pageone
+  only:
+    - testawss3 # Definir la única rama con la que se levantará el stage de deploy
