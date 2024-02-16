@@ -19,7 +19,7 @@ const lifecycles = singleSpaAngular({
     singleSpaPropsSubject.next(singleSpaProps);
     return platformBrowserDynamic(getSingleSpaExtraProviders()).bootstrapModule(AppModule);
   },
-  template: '<iac-cloud-pageone />',
+  template: '<kuntur-mf-cards />',
   Router,
   NavigationStart,
   NgZone,

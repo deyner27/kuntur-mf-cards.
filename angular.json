@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "iac-cloud-pageone": {
+    "kuntur-mf-cards": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/iac-cloud-pageone",
+            "outputPath": "dist/kuntur-mf-cards",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
@@ -36,7 +36,7 @@
             "scripts": [],
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "iac-cloud-pageone",
+              "libraryName": "kuntur-mf-cards",
               "libraryTarget": "umd"
             },
             "deployUrl": "http://localhost:4203/"
@@ -79,10 +79,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "iac-cloud-pageone:build:production"
+              "browserTarget": "kuntur-mf-cards:build:production"
             },
             "development": {
-              "browserTarget": "iac-cloud-pageone:build:development"
+              "browserTarget": "kuntur-mf-cards:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "iac-cloud-pageone:build"
+            "browserTarget": "kuntur-mf-cards:build"
           }
         },
         "test": {
@@ -114,5 +114,5 @@
       }
     }
   },
-  "defaultProject": "iac-cloud-pageone"
+  "defaultProject": "kuntur-mf-cards"
 }

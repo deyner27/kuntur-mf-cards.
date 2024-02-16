@@ -31,6 +31,6 @@ deploy:
     - aws configure set aws_secret_access_key vDjhSMHdqCynQUxIn8sNddPgIBjPOKLixlTufc02
     - aws configure set region us-east-1
     - echo "Ejecutando deploy..."
-    - aws s3 sync ./dist/* s3://proyectbucket-8c51eda/iac-cloud-pageone
+    - aws s3 sync ./dist/* s3://proyectbucket-8c51eda/kuntur-mf-cards
   only:
     - testawss3 # Definir la única rama con la que se levantará el stage de deploy

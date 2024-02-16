@@ -1,5 +1,5 @@
 {
-  "name": "iac-cloud-pageone",
+  "name": "kuntur-mf-cards",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:single-spa:iac-cloud-pageone": "ng build iac-cloud-pageone --prod",
-    "serve:single-spa:iac-cloud-pageone": "ng s --project iac-cloud-pageone --disable-host-check --port 4203 --live-reload false"
+    "build:single-spa:kuntur-mf-cards": "ng build kuntur-mf-cards --prod",
+    "serve:single-spa:kuntur-mf-cards": "ng s --project kuntur-mf-cards --disable-host-check --port 4203 --live-reload false"
   },
   "private": true,
   "dependencies": {

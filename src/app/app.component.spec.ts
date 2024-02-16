@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'iac-cloud-pageone'`, () => {
+  it(`should have as title 'kuntur-mf-cards'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('iac-cloud-pageone');
+    expect(app.title).toEqual('kuntur-mf-cards');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('iac-cloud-pageone app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('kuntur-mf-cards app is running!');
   });
 });

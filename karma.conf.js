@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/iac-cloud-pageone'),
+      dir: require('path').join(__dirname, './coverage/kuntur-mf-cards'),
       subdir: '.',
       reporters: [
         { type: 'html' },

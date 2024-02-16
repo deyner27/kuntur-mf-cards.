@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'iac-cloud-pageone',
+  selector: 'kuntur-mf-cards',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'iac-cloud-pageone';
+  title = 'kuntur-mf-cards';
 }
