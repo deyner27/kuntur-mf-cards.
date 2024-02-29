@@ -20,7 +20,10 @@ export class AppInterceptor implements HttpInterceptor {
     let intReq = request;
     const token = this.authService.getToken();
     if (token) {
-      intReq = request.clone({ headers: request.headers.set('Authorization', 'Bearer ' + token) });
+      intReq = request.clone({
+        headers: request.headers
+          .set('Authorization', 'Bearer ' + token)
+      });
     }
     return next.handle(intReq);
   }

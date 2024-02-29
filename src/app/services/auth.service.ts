@@ -15,10 +15,12 @@ export class AuthService {
 
   //Verificar si el usuario esta logeado en api gateway
   async isAuth(): Promise<boolean> {
-    let params: HttpParams = new HttpParams().set('auth', 'validateSession');
-
+    // let params: HttpParams = new HttpParams().set('auth', 'validateSession');
+    let credentials = {
+      auth: 'validateSession'
+    }
     try {
-      const res: any = await this.httpClient.get<any>(`${this.url}/logeo`, { params }).toPromise();
+      const res: any = await this.httpClient.post<any>(`${this.url}/auth`,credentials).toPromise();
       return res.validSession;
     } catch (err) {
       console.error('Error:', err);
