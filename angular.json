@@ -39,7 +39,7 @@
               "libraryName": "kuntur-mf-cards",
               "libraryTarget": "umd"
             },
-            "deployUrl": "http://localhost:4203/"
+            "deployUrl": "https://dfbm1hega3d6y.cloudfront.net/kuntur-mf-cards/"
           },
           "configurations": {
             "production": {
