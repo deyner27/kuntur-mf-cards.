@@ -38,8 +38,7 @@
               "path": "extra-webpack.config.js",
               "libraryName": "kuntur-mf-cards",
               "libraryTarget": "umd"
-            },
-            "deployUrl": "https://dfbm1hega3d6y.cloudfront.net/kuntur-mf-cards/"
+            }
           },
           "configurations": {
             "production": {
@@ -61,7 +60,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "none"
+              "outputHashing": "none",
+              "deployUrl": "https://dfbm1hega3d6y.cloudfront.net/kuntur-mf-cards/"
             },
             "development": {
               "buildOptimizer": false,

@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:single-spa:kuntur-mf-cards": "ng build kuntur-mf-cards --prod",
-    "serve:single-spa:kuntur-mf-cards": "ng s --project kuntur-mf-cards --disable-host-check --port 4203 --live-reload false"
+    "serve:single-spa:kuntur-mf-cards": "ng s --deploy-url http://localhost:4203/ --project kuntur-mf-cards --disable-host-check --port 4203 --live-reload false"
   },
   "private": true,
   "dependencies": {
