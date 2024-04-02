@@ -8,14 +8,11 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "uni",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
@@ -31,14 +28,20 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
               "libraryName": "kuntur-mf-cards",
               "libraryTarget": "umd"
-            }
+            },
+            "deployUrl": "http://localhost:4203/"
           },
           "configurations": {
             "production": {
@@ -60,8 +63,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "none",
-              "deployUrl": "https://dfbm1hega3d6y.cloudfront.net/kuntur-mf-cards/"
+              "outputHashing": "none"
             },
             "development": {
               "buildOptimizer": false,
@@ -106,14 +108,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap"
+              "src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
     }
-  },
-  "defaultProject": "kuntur-mf-cards"
+  }
 }

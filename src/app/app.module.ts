@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { interceptorSpringProvider } from './interceptors/app.interceptor';
@@ -14,7 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    // NgModule
   ],
   providers: [interceptorSpringProvider],
   bootstrap: [AppComponent]
