@@ -4734,6 +4734,20 @@ input[type='button'].btn-block {
     appearance: none;
 }
 
+@media (min-width: 768px) {
+    .content-dashboard{
+        padding-left: 250px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .card-body{
+        overflow: hidden;
+    }
+    #content{
+        padding: 20px;
+    }
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
     .custom-range::-ms-thumb {
         transition: none;
@@ -4783,6 +4797,8 @@ input[type='button'].btn-block {
         transition: none;
     }
 }
+
+
 
 .nav {
     display: flex;

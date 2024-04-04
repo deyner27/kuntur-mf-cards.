@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
   public salesChart;
   public clicked: boolean = true;
   public clicked1: boolean = false;
+test: string|number|Date;
 
   ngOnInit() {
 
