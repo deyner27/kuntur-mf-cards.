@@ -9,8 +9,9 @@ build:
   stage: build
   image: node:16
   script:
-    - npm install # Instalar dependencias
-    - npm run build # Construir la aplicación
+    - npm install -g @angular/cli@14.2.13 # Instalamos Angular CLI de forma global
+    - npm install # Instalamos las dependencias del proyecto
+    - npm run build --prod # Compilamos la aplicación en modo producción
   artifacts:
     paths:
       - dist/ # Ruta de los archivos de construcción

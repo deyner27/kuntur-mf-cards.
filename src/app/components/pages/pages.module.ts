@@ -6,7 +6,9 @@ import { PageRoutingModule } from './pages.routing.module';
 // import { NombreComponenteComponent } from './nombre-componente/nombre-componente.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [
+    DashboardComponent
+  ],
   imports: [
     CommonModule, MaterialModule, PageRoutingModule
   ]

@@ -4734,19 +4734,6 @@ input[type='button'].btn-block {
     appearance: none;
 }
 
-@media (min-width: 768px) {
-    .content-dashboard{
-        padding-left: 250px;
-        width: 100%;
-        overflow: hidden;
-    }
-    .card-body{
-        overflow: hidden;
-    }
-    #content{
-        padding: 20px;
-    }
-}
 
 @media screen and (prefers-reduced-motion: reduce) {
     .custom-range::-ms-thumb {
@@ -14167,6 +14154,10 @@ button.bg-lighter:focus {
     background-color: rgba(63, 87, 223, .6) !important;
 }
 
+.bg-gradient-danger-duo {
+    background: linear-gradient(87deg, #f5365c 0, #f56036 100%) top/100% 50vh no-repeat!important;
+}
+
 a.bg-translucent-primary:hover,
 a.bg-translucent-primary:focus,
 button.bg-translucent-primary:hover,
@@ -16547,7 +16538,6 @@ a.btn-icon-only {
 
 .footer {
     padding: 2.5rem 0;
-
     background: #f7fafc;
 }
 
@@ -20221,4 +20211,21 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle {
     bottom: 0;
 
     height: 3px;
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding-top: 0%;
+        padding-left: 250px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card-body {
+        overflow: hidden;
+    }
+
+    #content {
+        padding: 20px;
+    }
 }
