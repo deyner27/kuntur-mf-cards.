@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoaderService } from './services/loading.service';
 
 @Component({
   selector: 'kuntur-mf-cards',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kuntur-mf-cards';
+  constructor(public loaderService: LoaderService){
+
+  }
 }

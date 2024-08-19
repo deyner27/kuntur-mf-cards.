@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { interceptorSpringProvider } from './interceptors/app.interceptor';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from './modules/material/material.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    MaterialModule
   ],
   providers: [interceptorSpringProvider],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import Chart from 'chart.js';
 // core components
 // import {
@@ -21,6 +22,23 @@ export class DashboardComponent implements OnInit {
   public clicked: boolean = true;
   public clicked1: boolean = false;
 test: string|number|Date;
+private receivedData: any;
+
+  constructor(private router:Router){
+    // const navigation = this.router.getCurrentNavigation();
+    // if (navigation.extras.state) {
+    //   this.receivedData = navigation.extras.state  as {data: string};
+    //   this.data = this.receivedData.data;
+    //   console.log(this.data);
+    // }
+
+    // window.addEventListener('sharedData', this.handleSharedData.bind(this));
+  }
+
+  handleSharedData(event: CustomEvent) {
+    this.receivedData = event.detail;
+    console.log(this.receivedData);
+  }
 
   ngOnInit() {
 
@@ -56,5 +74,9 @@ test: string|number|Date;
     this.salesChart.data.datasets[0].data = this.data;
     this.salesChart.update();
   }
+
+  // ngOnDestroy() {
+  //   window.removeEventListener('sharedData', this.handleSharedData.bind(this));
+  // }
 
 }

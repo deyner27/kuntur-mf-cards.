@@ -21,7 +21,8 @@ export class AuthService {
     }
     try {
       const res: any = await this.httpClient.post<any>(`${this.url}/auth`,credentials).toPromise();
-      return res.validSession;
+      console.log('SESIÓN ACTIVA')
+      return res.validSession; 
     } catch (err) {
       console.error('Error:', err);
       return false;

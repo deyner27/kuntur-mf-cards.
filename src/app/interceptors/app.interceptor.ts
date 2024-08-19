@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 import {
   HttpRequest,
   HttpHandler,
@@ -6,7 +6,7 @@ import {
   HttpInterceptor,
   HTTP_INTERCEPTORS
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, finalize } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 @Injectable()
@@ -29,4 +29,6 @@ export class AppInterceptor implements HttpInterceptor {
   }
 }
 
-export const interceptorSpringProvider = [{ provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true }]
+export const interceptorSpringProvider = [
+  { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true }
+]
